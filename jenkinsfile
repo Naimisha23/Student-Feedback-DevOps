@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/Naimisha23/student-feedback-devops.git'
+            }
+        }
+
+        stage('Build Docker') {
+            steps {
+                sh 'docker build -t feedback-app .'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'ansible-playbook ansible/deploy.yml -i ansible/inventory'
+            }
+        }
+    }
+}
