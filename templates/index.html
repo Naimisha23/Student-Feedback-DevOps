@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Student Feedback System</h2>
+
+<form method="POST" action="/add">
+    <input type="text" name="name" placeholder="Enter Name" required><br>
+    <input type="text" name="message" placeholder="Enter Feedback" required><br>
+    <button type="submit">Submit</button>
+</form>
+
+<h3>Feedback List</h3>
+
+{% for f in data %}
+<p><b>{{f[0]}}</b>: {{f[1]}}</p>
+{% endfor %}
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Feedback System</h1>
+
+    <div class="card">
+        <h2>Submit Feedback</h2>
+        <form method="POST" action="/add">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <textarea name="message" placeholder="Enter your feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>📋 Recent Feedback</h2>
+
+        {% if data %}
+            {% for f in data %}
+                <div class="feedback-item">
+                    <strong>{{f[0]}}</strong>
+                    <p>{{f[1]}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-data">No feedback yet</p>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

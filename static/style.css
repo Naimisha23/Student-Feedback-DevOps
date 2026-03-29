@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Textarea height */
+textarea {
+    height: 80px;
+}
+
+/* Button */
+button {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Feedback items */
+.feedback-item {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: left;
+    width: 90%;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.feedback-item strong {
+    color: #2c3e50;
+}
+
+.no-data {
+    color: gray;
+}
